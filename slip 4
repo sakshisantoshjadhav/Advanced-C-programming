@@ -1,0 +1,42 @@
+Q 1 Write a C program to interchange two numbers using pointers.
+#include<stdio.h>
+int main()
+{
+int a,b,*p,*q,t;
+printf("enter first number");
+scanf("%d",&a);
+printf("enter second number");
+scanf("%d",&b);
+p=&a;
+q=&b;
+t=*p;
+*p=*q;
+*q=t;
+printf("\n first number=%d",a);
+printf("\n second number=%d",b);
+}
+
+Q 2. Write a C program to count the vowels and consonants in a string.
+
+#include<stdio.h>
+int main()
+{
+char s1[20];
+int i,c1=0,c2=0;
+printf("enter string");
+gets(s1);
+for(i=0;s1[i]!='\0';i++)
+{
+if(s1[i]=='A'||s1[i]=='a'||s1[i]=='E'||s1[i]=='e'||s1[i]=='I'||s1[i]=='i'||s1[i]=='O'||s1[i]=='o'||s1[i]=='U'||s1[i]=='u')
+c1++;
+else
+c2++;
+}
+printf("\nvowel count=%d",c1);
+printf("\nconsonants count=%d",c2);
+}
+
+
+
+
+
