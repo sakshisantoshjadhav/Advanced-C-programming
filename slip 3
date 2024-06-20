@@ -1,0 +1,49 @@
+Q 1Write a C program to find the area of a circle by using PI as
+macro.
+
+#define PI 3.14
+int main()
+{
+ float r,a;
+ printf("enter radius");
+ scanf("%f",&r);
+ a=PI*r*r;
+ printf("Area of circle=%f",a);
+}
+
+Q 2. Write a menu driven program to perform the following 
+operations on strings using standard library functions:
+i) Compare ii) Copy
+
+#include<stdio.h>
+int main()
+{
+char s1[20],s2[20];
+int ch,k;
+printf("enter first string");
+gets(s1);
+printf("enter second string");
+gets(s2);
+printf("enter choice:\n1-compare\n2-copy");
+scanf("%d",&ch);
+switch(ch)
+{
+case 1:k=strcmp(s1,s2);
+       if(k==0)
+       printf("string are same");
+       if(k>0)
+       printf("first string is greater");
+       if(k<0)
+       printf("second string is greater");
+       break;
+case 2:strcpy(s1,s2);
+       printf("\nfirst string=%s",s1);
+       printf("\nsecond string=%s",s2);
+       break;
+default:printf("invalid choice");
+}
+}
+
+
+
+
